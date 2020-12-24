@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <item name="ll" type="id" />
+    <item name="hours" type="id" />
+    <item name="minutes" type="id" />
+    <item name="second" type="id" />
+</resources>

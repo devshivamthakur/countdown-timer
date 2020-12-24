@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/teal_700"
     android:padding="20dp"
-    tools:context=".MainActivity"
-    android:background="@color/teal_700">
+    tools:context=".MainActivity">
 <TextView
     android:id="@+id/set_time"
     android:layout_width="match_parent"
@@ -31,53 +31,85 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:cardCornerRadius="10dp"
-         app:cardBackgroundColor="@color/teal_700">
-            <EditText
-                android:id="@+id/hours"
+         app:cardCornerRadius="10dp">
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hrs"
-                android:inputType="time"
-                android:padding="10dp" />
+                app:boxBackgroundColor="#191919"
+                app:hintTextColor="@color/white"
+                android:textColorHint="@color/white">
+                <EditText
+                    android:id="@+id/hours"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hrs"
+                    android:inputType="time"
+                    android:maxLength="23"
+                    android:textColor="@color/white"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:cardCornerRadius="10dp"
-            app:cardBackgroundColor="@color/teal_700">
-            <EditText
-                android:id="@+id/minutes"
+            app:cardBackgroundColor="@color/teal_700"
+            app:cardCornerRadius="10dp">
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/min"
-                android:inputType="time"
-                android:padding="10dp" />
+                app:boxBackgroundColor="#191919"
+                app:hintTextColor="@color/white"
+                android:textColorHint="@color/white">
+                <EditText
+                    android:id="@+id/minutes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/min"
+                    android:inputType="time"
+                    android:maxLength="23"
+                    android:textColor="@color/white"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:cardCornerRadius="10dp"
-            app:cardBackgroundColor="@color/teal_700">
-            <EditText
-                android:id="@+id/second"
+            app:cardBackgroundColor="@color/teal_700"
+            app:cardCornerRadius="10dp">
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/sec"
-                android:inputType="time"
-                android:padding="10dp" />
+               app:boxBackgroundColor="#191919"
+               app:hintTextColor="@color/white"
+                android:textColorHint="@color/white"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/second"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/sec"
+                    android:inputType="time"
+                    android:maxLength="23"
+                    android:textColor="@color/white"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
         </androidx.cardview.widget.CardView>
 
 
     </LinearLayout>
     <com.google.android.material.card.MaterialCardView
-        app:cardBackgroundColor="@color/teal_700"
         android:id="@+id/card_v"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        app:cardBackgroundColor="@color/teal_700"
         app:cardCornerRadius="0dp">
         <RelativeLayout
             android:layout_width="wrap_content"

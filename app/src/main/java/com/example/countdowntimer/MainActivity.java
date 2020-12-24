@@ -47,7 +47,7 @@ EditText minutes,second,hour;
             min=minutes.getText().toString();  // minute from user
             sec= second.getText().toString();  // second
             h= hour.getText().toString();       // hours
-            // Toast.makeText(getApplicationContext(),String.valueOf(h),Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),String.valueOf(h),Toast.LENGTH_SHORT).show();
             if(min.isEmpty()){
                 min="0";
             } if(sec.isEmpty()){
@@ -59,7 +59,7 @@ EditText minutes,second,hour;
         }catch (Exception e){
             Log.e("error",e.getMessage());
         }
-        if(!min.isEmpty()||!sec.isEmpty()||!h.isEmpty()){
+        if(!min.equals("0")||!sec.equals("0")||!h.equals("0")){
 
             try {
                 int m=Integer.parseInt(min);
